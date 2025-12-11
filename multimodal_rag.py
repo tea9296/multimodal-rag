@@ -12,6 +12,7 @@ from intro_multimodal_rag_utils import (
     print_text_to_image_citation,
     print_text_to_text_citation,
 )
+import time
 from vector_db import VectorDB, build_vector_db_from_dataframes
 
 # Load environment variables from parent directory's .env file
@@ -31,6 +32,8 @@ client = genai.Client(vertexai=True, project=PROJECT_ID, location=LOCATION)
 text_model = GenerativeModel("gemini-2.5-flash")
 multimodal_model = text_model
 multimodal_model_flash = text_model
+
+st = time.time()
 
 # 初始化 VectorDB
 vector_db = VectorDB(persist_directory="./chroma_db")
@@ -254,6 +257,7 @@ print(ret)
 print("---------------Matched Images------------------\n")
 print(matching_results_image_fromdescription_data[0]["img_path"],
         matching_results_image_fromdescription_data[1]["img_path"],)
+print("spend time:", time.time() - st)
 # display_images(
 #     [
 #         matching_results_image_fromdescription_data[0]["img_path"],
