@@ -1,0 +1,16 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+.env
+# Virtual environments
+.venv
+old_mmrg/
+data*/
+images*/
+.DS_Store
+*.ipynb
+chroma_db/

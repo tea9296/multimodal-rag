@@ -1,0 +1,16 @@
+google-cloud-aiplatform 
+langchain-core 
+langchain-google-vertexai 
+langchain-text-splitters 
+langchain-community 
+unstructured[all-docs]
+pypdf 
+pydantic 
+lxml 
+pillow 
+matplotlib 
+opencv-python 
+tiktoken
+google-genai
+pymupdf
+chromadb
